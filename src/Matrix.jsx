@@ -39,6 +39,7 @@ const Box = ({storageKey}) => {
         <br />
         {items.map((val, index) => {
             return <li key={index}>{val}<button
+            className='remove-button'
             onClick={() => handleRemove(index)}
             >-</button></li>
         })}

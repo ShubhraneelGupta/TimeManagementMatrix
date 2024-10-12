@@ -2,20 +2,48 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 25vw;
-    height: 30vh;
-    border: white 2px solid;
+    width: 28vw;
+    height: 35vh;
     border-radius: 5px;
-    overflow-y: scroll;
-    background-color: lightblue;
+    // overflow-y: scroll;
+    color: white;
+
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     
     .header{
+        position: relative;
+        height: 2.6rem;
         position: sticky;
         top: 0;
-        display: flex;
-        justify-content: space-between;
-        background-color: lightcoral;
-        padding: 1rem;
+        background-color: #004890;
+        padding: 0.8rem;
+        border-radius: 10px 10px 0 0;
+
+        input {
+            width: 80%;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.4rem;
+        }
+
+        button{
+            font-size: 1.5rem;
+            font-weight: bolder;
+            width: 2.5rem;
+            border: none;
+            border-radius: 100%;
+            position: absolute;
+            right: 1rem;
+            height: 2.5rem;
+            color: green;
+        }
+        
     }
 
     li{
@@ -24,27 +52,39 @@
         line-height: 2rem;
         display: flex;
         justify-content: space-between;
+        font-size: 1.5rem;
+
+
+
+        .remove-button {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            width: 2.5rem;
+            border: none;
+            border-radius: 50px;
+            height: 2.5rem;
+            color: red;
+        }
     }
 }
 
-button{
-    height: 1.5rem;
-    width: 2.5rem;
-    border: none;
-    border-radius: 10px;
-}
+
 
 .matrix-table {
-    color: black;
+    color: white;
     position: absolute;
     margin: 50vh 50vw;
     transform: translate(-50%, -50%);
     td{
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         color: black;
     }
 
     .side {
         transform: rotate(-90deg);
     }
+}
+
+h1{
+    color: white;
 }
