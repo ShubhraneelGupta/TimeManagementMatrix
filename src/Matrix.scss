@@ -1,0 +1,49 @@
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 30vh;
+    border: white 2px solid;
+    border-radius: 5px;
+    overflow-y: scroll;
+    background-color: lightblue;
+    
+    .header{
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: lightcoral;
+        padding: 1rem;
+    }
+
+    li{
+        padding: 0 1rem;
+        line-height: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+button{
+    height: 1.5rem;
+    width: 2.5rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.matrix-table {
+    color: black;
+    position: absolute;
+    margin: 50vh 50vw;
+    transform: translate(-50%, -50%);
+    td{
+        padding: 1rem;
+        color: black;
+    }
+
+    .side {
+        transform: rotate(-90deg);
+    }
+}
