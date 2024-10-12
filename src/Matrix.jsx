@@ -1,8 +1,16 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import './Matrix.scss'
 
-const Box = () => {
-    const [items, setItems] = useState([]);
+const Box = ({storageKey}) => {
+    const [items, setItems] = useState(() => {
+        const savedItems = localStorage.getItem(storageKey);
+        return savedItems ? JSON.parse(savedItems) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem(storageKey, JSON.stringify(items));
+    }, [items, storageKey]);
+
     const inputRef = useRef()
 
     const handleAdd = () => {
@@ -46,13 +54,13 @@ const Matrix = () => {
         </tr>
         <tr>
             <td className='side'><h1>Important</h1></td>
-            <td><Box/></td>
-            <td><Box/></td>
+            <td><Box storageKey={'box1'}/></td>
+            <td><Box storageKey={'box2'}/></td>
         </tr>
         <tr>
             <td className='side'><h1>Not Important</h1></td>
-            <td><Box/></td>
-            <td><Box/></td>
+            <td><Box storageKey={'box3'}/></td>
+            <td><Box storageKey={'box4'}/></td>
         </tr>
     </table>
 }
