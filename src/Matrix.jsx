@@ -16,7 +16,7 @@ const Box = ({ storageKey }) => {
     const handleAdd = () => {
         const input = inputRef.current.value;
         if (input) {
-            setItems([...items, { text: input }]); // Store text as object
+            setItems([...items, { text: input }]);
         }
         inputRef.current.value = '';
     };
