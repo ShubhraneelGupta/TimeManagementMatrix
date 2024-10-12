@@ -1,6 +1,9 @@
 *{
   padding: 0;
   margin: zero;
+  ::selection {
+    background: #68FCF8;
+  }
 }
 
 body{
