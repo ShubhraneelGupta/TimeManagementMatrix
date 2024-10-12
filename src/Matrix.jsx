@@ -33,6 +33,7 @@ const Box = ({storageKey}) => {
             type="text" />
 
             <button
+            className='add-button'
             onClick={handleAdd}
             >+</button>
         </div>
